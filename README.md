@@ -1,4 +1,4 @@
-# IRONCHAT
+# IRONCHAT - Express app
 
 It allows ironhack students to publish and discuss tech related topics. Users can follow each other and stay up to date on their interests.
 
