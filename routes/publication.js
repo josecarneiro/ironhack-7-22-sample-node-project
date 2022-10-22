@@ -1,3 +1,4 @@
+// here we're going to list the routes for publications
 'use strict';
 
 const express = require('express');
