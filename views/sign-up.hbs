@@ -1,0 +1,28 @@
+<form action="/authentication/sign-up" method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="input-name" class="form-label">Name</label>
+    <input class="form-control" type="text" id="input-name" name="name" placeholder="Your Name" />
+  </div>
+
+  <div class="mb-3">
+    <label for="input-email" class="form-label">Email</label>
+    <input class="form-control" type="email" id="input-email" name="email" placeholder="Your Email" />
+  </div>
+
+  <div class="mb-3">
+    <label for="input-username" class="form-label">Username</label>
+    <input class="form-control" type="text" id="input-username" name="username" placeholder="A unique username" />
+  </div>
+
+  <div class="mb-3">
+    <label for="input-password" class="form-label">Password</label>
+    <input class="form-control" type="password" name="password" id="input-password" placeholder="A Strong Password" />
+  </div>
+
+  <div class="mb-3">
+    <label for="input-picture" class="form-label">Profile Picture <small>(optional)</small></label>
+    <input class="form-control" id="input-picture" type="file" name="picture" />
+  </div>
+
+  <button class="btn btn-primary">Sign Up</button>
+</form>

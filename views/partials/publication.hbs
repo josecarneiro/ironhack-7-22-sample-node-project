@@ -1,0 +1,22 @@
+<div class="card mb-3 shadow-sm">
+  <div class="row g-0">
+    {{#if picture}}
+    <div class="col-md-4">
+      <img src="{{picture}}" alt="{{message}}" class="img-fluid rounded-start" />
+    </div>
+    {{/if}}
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{message}}</h5>
+        <p class="card-text">
+          by <a href="/profile/{{author._id}}">{{author.name}}</a>
+        </p>
+        <p class="card-text"><small class="text-muted"> {{formatDate createdAt}}{{#if hasBeenUpdated}}
+            (edited){{/if}}</small></p>
+        {{#if isOwn}}
+        <a href="/publication/{{_id}}/edit" class="btn btn-primary">Edit</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

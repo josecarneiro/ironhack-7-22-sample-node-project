@@ -1,0 +1,16 @@
+{{>publicationcreationform}}
+
+{{#if publicationsFromFollowed.length}}
+
+<h2>Publications from people you follow</h2>
+{{#each publicationsFromFollowed}}
+{{>publication}}
+{{/each}}
+
+{{/if}}
+
+
+<h2>Latest Publications</h2>
+{{#each publications}}
+{{>publication}}
+{{/each}}

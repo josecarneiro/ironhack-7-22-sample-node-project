@@ -1,0 +1,39 @@
+<header style="display: flex; align-items: center; gap: 16px;">
+  {{#if profile.picture}}
+  <img src="{{profile.picture}}" alt="{{profile.name}}" class="img-thumbnail rounded-circle w-25">
+  {{/if}}
+
+  <h1>{{profile.name}}</h1>
+
+  {{!-- If no user is authenticated, no action should be shown --}}
+  {{#if user}}
+
+  {{#if isOwnProfile}}
+
+  <a href="/profile/edit">Edit Profile</a>
+
+  {{else}}
+
+  {{#if follow}}
+  {{!-- Show following button if "follow" relationship exists --}}
+  <form method="POST" action="/profile/{{profile._id}}/unfollow">
+    <button>Following</button>
+  </form>
+  {{else}}
+  {{!-- Show follow button if no "follow" relationship exists --}}
+  <form method="POST" action="/profile/{{profile._id}}/follow">
+    <button>Follow</button>
+  </form>
+  {{/if}}
+
+  {{/if}}
+
+
+  {{/if}}
+</header>
+
+<h3>{{profile.name}}'s Latest Publications</h3>
+
+{{#each publications}}
+{{>publication}}
+{{/each}}
