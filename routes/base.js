@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
     .then((publicationDocuments) => {
       publications = publicationDocuments;
       return Follow.find({
-        follower: req.user._id
+        follower: req.user ? req.user._id : null
       });
     })
     .then((follows) => {
